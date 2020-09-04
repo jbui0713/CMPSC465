@@ -1,3 +1,4 @@
+
 def mergeTwoSortedArrays(array1Size, array1, array2Size, array2):
     mergedArraySize = 0
     mergedArray = []
@@ -23,11 +24,10 @@ def mergeTwoSortedArrays(array1Size, array1, array2Size, array2):
             mergedArraySize += 1
     print(len(mergedArray), " ".join(map(str, mergedArray)))
 
-
-array_A = list(map(int, input("array 1: ").strip().split()))  # takes integers input, puts them in list
+array_A = list(map(int, input().strip().split()))  # takes integers input, puts them in list
 len_A = array_A.pop(0)
 
-array_B = list(map(int, input("array 2: ").strip().split()))  # takes integers input, puts them in list
+array_B = list(map(int, input().strip().split()))  # takes integers input, puts them in list
 len_B = array_B.pop(0)
 
 mergeTwoSortedArrays(len_A, array_A, len_B, array_B)
