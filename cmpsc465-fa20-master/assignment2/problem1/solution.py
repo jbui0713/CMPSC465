@@ -1,8 +1,7 @@
 
 
-#array_A = list(map(int, input().strip().split()))
+array_A = list(map(int, input().strip().split()))
 #print(array_A)
-
 
 array_B = list(map(int, input().strip().split()))
 print(array_B)
