@@ -11,17 +11,15 @@ def mergeAndCount(a, b):
         bj = b[currentB]
         if (ai<=bj):
             mergedArray.append(ai)
-            ai+=1
             currentA += 1
         else:
             mergedArray.append(bj)
             count+=(len(a)-currentA)
             currentB += 1
-        print(mergedArray)
     if(currentA == len(a)):
-        mergedArray.extend(b)
+        mergedArray.extend(b[currentB:])
     else:
-        mergedArray.extend(a)
+        mergedArray.extend(a[currentA:])
     return(count, mergedArray)
 
 def sortAndCount(l):
@@ -35,21 +33,17 @@ def sortAndCount(l):
         a = l[:n]
         b = l[n:len(l)]
         (ra, a) = sortAndCount(a)
-        print(a)
         (rb, b) = sortAndCount(b)
-        print(b)
         (r, l) = mergeAndCount(a,b)
-        print(l)
     r = ra+rb+r
     return (r, l)
 
 
-# array_A = list(map(int, input().strip().split()))
-# length = array_A[0]
-# #print(array_A)
-#
-# array_B = list(map(int, input().strip().split()))
-# #print(array_B)
+array_A = list(map(int, input().strip().split()))
+length = array_A[0]
+
+array_B = list(map(int, input().strip().split()))
+
 # pairs = 0
 # for i in range(len(array_B)):
 #     for j in range(i+1, len(array_B)):
@@ -57,10 +51,10 @@ def sortAndCount(l):
 #             pairs+=1
 # print(pairs)
 # print("\n\n")
-#
-# print(sortAndCount(array_B))
 
-a = [1, 2, 3, 5]
-b = [3, 4, 6, 7]
+# print(sortAndCount(array_B))
+#1 5 -3 4 -6 -2 0 3
+
+
 # = [1, 2, 3, 3, 4, 5, 6, 7]
-print(mergeAndCount(a,b))
+print(sortAndCount(array_B)[0])
