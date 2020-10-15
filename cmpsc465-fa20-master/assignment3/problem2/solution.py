@@ -11,7 +11,7 @@ class Graph():
 
     def printSolution(self, dist):
         for node in range(self.V):
-            if (dist[node] == 2147483647):
+            if (dist[node] >= 5000000):
                 dist[node] = -1
             print(dist[node])
 
