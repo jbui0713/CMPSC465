@@ -11,8 +11,8 @@ class Graph():
 
     def printSolution(self, dist):
         for node in range(self.V):
-            if (dist[node] == 2147483647):
-                dist[node] = -1
+            # if (dist[node] == 2147483647):
+            #     dist[node] = -1
             print(dist[node])
 
     def minDistance(self, dist, sptSet):
